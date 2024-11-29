@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #4a4e69;
+  padding-bottom: 50px;
+}
+
+.product-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.product-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 20px;
+  gap: 30px;
+  width: 600px;
+  height: 350px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background-color: #e9dbd4;
+}
+
+.product-card .div-img {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card img {
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.product-info {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-info h2 {
+  font-size: 28px;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.product-info p {
+  color: #555;
+  text-align: center;
+}
+
+.variations,
+.sizes {
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+}
+
+.color-circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #ddd;
+}
+
+.size-circle {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  background: #f5f5f5;
+}
+
+.size-circle.selected,
+.color-circle.selected {
+  border: 3px solid #007BFF;
+}
+
+.price-stock {
+  font-weight: bold;
+  margin: 10px 0;
+  font-size: 20px;
+  color: #22223b;
+}
+
+.add-btn {
+  background-color: #4a4e69;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-btn:hover {
+  background-color: #606c38;
+}
+
+@media (max-width: 700px) {
+  .product-card {
+    flex-direction: column;
+    width: 80%;
+    height: auto;
+  }
+
+  .product-card .div-img,
+  .product-info {
+    width: 100%;
+  }
+
+  .product-card img {
+    max-width: 100%;
+    max-height: auto;
+  }
+
+  .product-info {
+    align-items: center;
+    padding: 10px;
+  }
+}
